@@ -16,12 +16,14 @@ main:
 	move $a0, $t2
 	li $v0, 11
 	syscall
-	add $t1,$t1,1			# increments loop counter
+	add $t1, $t1, 1			# increments loop counter
 	add $s1, $s1, 1 		# increments position in the buffer
 	j loop
-	
+
 	endloop:
-	li $v0, 10		# syscall to exit program
+	
+	.include "sound.asm"		# plays the music
+	li $v0, 10			# syscall to exit program
 	syscall
 	
 parse:
