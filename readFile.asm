@@ -1,5 +1,5 @@
 	.data
-file: .asciiz "/home/ay/Projects/mips-assembler/test.asm"      # filename for input
+file: .asciiz "test.asm"      # filename for input
 buffer: .space 1000	     # arbitrary since input file size is unknowable
 
 	.text
